@@ -1,3 +1,29 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/articles", "destination": "/articles.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/mentions-legales", "destination": "/mentions-legales.html" },
+    { "source": "/politique-de-confidentialite", "destination": "/politique-de-confidentialite.html" },
+    { "source": "/conditions-generales-de-vente", "destination": "/conditions-generales-de-vente.html" },
+    { "source": "/soin-quantique", "destination": "/soin-quantique.html" },
+    { "source": "/saut-quantique", "destination": "/saut-quantique.html" },
+    { "source": "/guidance-de-lame", "destination": "/guidance-de-lame.html" },
+    { "source": "/immersion-quantique", "destination": "/immersion-quantique.html" },
+    { "source": "/coeur-corps-esprit", "destination": "/coeur-corps-esprit.html" },
+    { "source": "/autosabotage-comment-arreter", "destination": "/autosabotage-comment-arreter.html" },
+    { "source": "/blessures-ame-sabotent-votre-vie", "destination": "/blessures-ame-sabotent-votre-vie.html" },
+    { "source": "/comment-se-liberer-emotions-negatives", "destination": "/comment-se-liberer-emotions-negatives.html" },
+    { "source": "/dimensions-3d-4d-5d-elever-vibration", "destination": "/dimensions-3d-4d-5d-elever-vibration.html" },
+    { "source": "/energie-quantique-bien-etre", "destination": "/energie-quantique-bien-etre.html" },
+    { "source": "/liberation-emotionnelle-blessures-ame", "destination": "/liberation-emotionnelle-blessures-ame.html" },
+    { "source": "/liberation-emotionnelle-quantique-cest-quoi", "destination": "/liberation-emotionnelle-quantique-cest-quoi.html" },
+    { "source": "/livres-developpement-personnel-spirituel", "destination": "/livres-developpement-personnel-spirituel.html" },
+    { "source": "/reprogrammer-subconscient", "destination": "/reprogrammer-subconscient.html" },
+    { "source": "/saut-quantique-changer-de-vie", "destination": "/saut-quantique-changer-de-vie.html" },
+    { "source": "/se-reconnecter-a-soi", "destination": "/se-reconnecter-a-soi.html" },
+    { "source": "/trouver-mission-de-vie", "destination": "/trouver-mission-de-vie.html" },
+    { "source": "/contact-entrepreneurs-millionnaire-de-coeur", "destination": "/contact-entrepreneurs-millionnaire-de-coeur.html" }
+  ]
 }
