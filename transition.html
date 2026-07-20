@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>La Puissance du Cœur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: #0d141a;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: #fff;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Fond bloqué — aucun clic, aucun scroll possible */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      background: rgba(13, 20, 26, 0.97);
+    }
+
+    /* Modal centré */
+    #lpdc-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9100;
+      width: min(500px, 92vw);
+      background: #0d141a;
+      border: 1px solid rgba(212,175,55,0.35);
+      padding: 36px 32px;
+      border-radius: 4px;
+      text-align: center;
+      box-shadow: 0 0 60px rgba(212,175,55,0.15), 0 24px 80px rgba(0,0,0,0.7);
+      animation: modalAppear 0.8s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+      pointer-events: all;
+      overflow: hidden;
+    }
+
+    #lpdc-modal::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 65%);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+      animation: modalPulse 4s ease-out infinite;
+    }
+
+    #lpdc-modal > * { position: relative; z-index: 1; }
+
+    @keyframes modalAppear {
+      from { opacity: 0; transform: translate(-50%, -50%) scale(0.88); }
+      to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+    @keyframes modalPulse {
+      0%   { transform: translate(-50%,-50%) scale(0.8); opacity: 0; }
+      30%  { opacity: 1; }
+      70%  { transform: translate(-50%,-50%) scale(1.2); opacity: 0.5; }
+      100% { transform: translate(-50%,-50%) scale(1.5); opacity: 0; }
+    }
+    @keyframes softGlow {
+      0%,100% { color: #D4AF37; text-shadow: 0 0 5px rgba(212,175,55,0.2); }
+      50%     { color: #f1d371; text-shadow: 0 0 20px rgba(212,175,55,0.6); }
+    }
+    @keyframes mFadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .m-ornament {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; margin-bottom: 20px;
+    }
+    .m-ornament-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.5));
+    }
+    .m-ornament-line.r {
+      background: linear-gradient(90deg, rgba(212,175,55,0.5), transparent);
+    }
+    .m-ornament-diamond {
+      width: 6px; height: 6px;
+      background: #D4AF37;
+      transform: rotate(45deg);
+    }
+
+    .m-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 14px;
+    }
+
+    .m-title {
+      font-size: clamp(1.6rem, 5vw, 2rem);
+      font-weight: 300;
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .m-title em { font-style: italic; color: #D4AF37; }
+
+    .m-text {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 14px;
+    }
+
+    .m-cta {
+      display: inline-block;
+      margin: 20px 0 16px;
+      padding: 14px 32px;
+      background: #D4AF37;
+      color: #0d141a;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      pointer-events: all;
+      transition: background 0.2s;
+    }
+    .m-cta:hover { background: #f1d371; }
+
+    .m-countdown-wrap {
+      animation: mFadeUp 0.8s ease 1.5s both;
+      margin-top: 12px;
+    }
+    .m-countdown-label {
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(212,175,55,0.6);
+      margin-bottom: 4px;
+    }
+    .m-countdown {
+      font-size: 1.5rem;
+      font-weight: 300;
+      animation: softGlow 1s ease-in-out infinite;
+    }
+
+    .m-signature {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(212,175,55,0.15);
+    }
+    .m-signature-name {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.5);
+    }
+
+    @media (max-width: 480px) {
+      #lpdc-modal { padding: 24px 20px; }
+      .m-title { font-size: 1.4rem; }
+      .m-text { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="lpdc-modal" role="dialog" aria-modal="true" aria-label="Transition vers Millionnaire de Cœur">
+  <div class="m-ornament">
+    <div class="m-ornament-line"></div>
+    <div class="m-ornament-diamond"></div>
+    <div class="m-ornament-line r"></div>
+  </div>
+  <p class="m-eyebrow">Un nouveau chapitre s'ouvre</p>
+  <h2 class="m-title">Tout mouvement<br>vers soi est<br><em>une victoire.</em></h2>
+  <p class="m-text">
+    Vous avez suivi la voie de la puissance du cœur. Ce chemin vous a conduit jusqu'ici,
+    et c'est précisément là que tout commence vraiment.
+  </p>
+  <p class="m-text">
+    Millionnaire de Cœur est la prochaine étape naturelle de votre évolution —
+    clarté décisionnelle, intelligence énergétique, puissance souveraine.
+  </p>
+  <a href="https://www.millionnairedecoeur.com" class="m-cta">Franchir le prochain seuil</a>
+  <div class="m-countdown-wrap">
+    <p class="m-countdown-label">Redirection dans</p>
+    <p class="m-countdown" id="m-countdown">33</p>
+  </div>
+  <div class="m-signature">
+    <p class="m-signature-name">Maria Francheteau — Millionnaire de Cœur</p>
+  </div>
+</div>
+
+<script>
+  let seconds = 33;
+  const el = document.getElementById('m-countdown');
+  const interval = setInterval(function() {
+    seconds--;
+    if (el) el.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(interval);
+      window.location.href = 'https://www.millionnairedecoeur.com';
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/(.*)", "destination": "/transition" },
     { "source": "/offres-liberation-emotionnelle-quantique", "destination": "/services" },
     { "source": "/articles-liberation-emotionnelle", "destination": "/articles" },
     { "source": "/contact-liberation-emotionnelle", "destination": "/contact" },
