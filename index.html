@@ -1,1808 +1,219 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>La Puissance du Cœur – Libération Émotionnelle Quantique | Maria Francheteau</title>
- <meta name="description" content="Je suis Maria Francheteau, coach en libération émotionnelle quantique. Ultra précis, ultra rapide, ultra puissant. Je libère ce que rien d'autre n'a pu atteindre." />
- <meta name="keywords" content="libération émotionnelle quantique, soin quantique, guidance, blocages émotionnels, Maria Francheteau, transformation personnelle, énergie du cœur" />
- <link rel="canonical" href="https://www.lapuissanceducoeur.com" />
- <link rel="stylesheet" href="/fonts/fonts.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>La Puissance du Cœur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
- <style>
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: #0d141a;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: #fff;
+      user-select: none;
+      pointer-events: none;
+    }
 
- /* ═══════════════════════════════════════════════════
- RESET & BASE
- ═══════════════════════════════════════════════════ */
- *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      background: rgba(13, 20, 26, 0.97);
+    }
 
- :root {
- --bg: #0d1520;
- --bg2: #0a1118;
- --gold: #C8A84B;
- --gold-pale: #fef7d6;
- --gold-glow: rgba(200,168,75,0.5);
- --dark: #0d1520;
- --text: #ffffff;
- }
+    #lpdc-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9100;
+      width: min(500px, 92vw);
+      background: #0d141a;
+      border: 1px solid rgba(212,175,55,0.35);
+      padding: 36px 32px;
+      border-radius: 4px;
+      text-align: center;
+      box-shadow: 0 0 60px rgba(212,175,55,0.15), 0 24px 80px rgba(0,0,0,0.7);
+      animation: modalAppear 0.8s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+      pointer-events: all;
+      overflow: hidden;
+    }
 
- html { scroll-behavior: smooth; overflow-x: hidden; }
+    #lpdc-modal::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 65%);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+      animation: modalPulse 4s ease-out infinite;
+    }
 
- body {
- background-color: var(--bg);
- color: #ffffff;
- font-family: 'DM Sans', sans-serif;
- -webkit-font-smoothing: antialiased;
- overflow-x: hidden;
- }
+    #lpdc-modal > * { position: relative; z-index: 1; }
 
- a { text-decoration: none; color: inherit; }
+    @keyframes modalAppear {
+      from { opacity: 0; transform: translate(-50%, -50%) scale(0.88); }
+      to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+    @keyframes modalPulse {
+      0%   { transform: translate(-50%,-50%) scale(0.8); opacity: 0; }
+      30%  { opacity: 1; }
+      70%  { transform: translate(-50%,-50%) scale(1.2); opacity: 0.5; }
+      100% { transform: translate(-50%,-50%) scale(1.5); opacity: 0; }
+    }
+    @keyframes softGlow {
+      0%,100% { color: #D4AF37; text-shadow: 0 0 5px rgba(212,175,55,0.2); }
+      50%     { color: #f1d371; text-shadow: 0 0 20px rgba(212,175,55,0.6); }
+    }
+    @keyframes mFadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
- /* ═══════════════════════════════════════════════════
- ANIMATIONS
- ═══════════════════════════════════════════════════ */
- @keyframes quantumSweep {
- 0% { background-position: -200% center; }
- 100% { background-position: 200% center; }
- }
- @keyframes laserSweep {
- 0% { background-position: -200% 0; }
- 100% { background-position: 200% 0; }
- }
- @keyframes laserGold {
- 0% { background-position: -200% 0; }
- 100% { background-position: 200% 0; }
- }
- @keyframes heartPulseBG {
- 0% { transform: scale(0.7) translate(-50%,-50%); opacity: 0; }
- 15% { opacity: 0.06; }
- 30% { transform: scale(1.1) translate(-50%,-50%); opacity: 0; }
- 45% { transform: scale(0.8) translate(-50%,-50%); opacity: 0; }
- 60% { opacity: 0.08; }
- 85% { transform: scale(1.4) translate(-50%,-50%); opacity: 0; }
- 100% { opacity: 0; }
- }
- @keyframes softGoldGlow {
- 0%, 100% { color: #C8A84B; text-shadow: 0 0 5px rgba(200,168,75,0.2); }
- 50% { color: #b8930f; text-shadow: 0 0 15px rgba(200,168,75,0.4); }
- }
- @keyframes navFadeIn {
- from { opacity: 0; transform: translateY(-6px); }
- to { opacity: 1; transform: translateY(0); }
- }
- @keyframes goldPulseBtn {
- 0%,100% { box-shadow: 0 0 0 0 rgba(200,168,75,0); }
- 50% { box-shadow: 0 0 20px 4px rgba(200,168,75,0.35); }
- }
+    .m-ornament {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; margin-bottom: 20px;
+    }
+    .m-ornament-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.5));
+    }
+    .m-ornament-line.r {
+      background: linear-gradient(90deg, rgba(212,175,55,0.5), transparent);
+    }
+    .m-ornament-diamond {
+      width: 6px; height: 6px;
+      background: #D4AF37;
+      transform: rotate(45deg);
+    }
 
- /* ═══════════════════════════════════════════════════
- HEADER / NAVIGATION
- ═══════════════════════════════════════════════════ */
- .header {
- position: fixed;
- top: 0; left: 0; right: 0;
- z-index: 1000;
- background-color: #fdf6d8;
- border-bottom: 1px solid rgba(200,168,75,0.25);
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 0 32px;
- height: 70px;
- animation: navFadeIn 0.6s ease both;
- backdrop-filter: blur(12px);
- }
+    .m-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 14px;
+    }
 
- .header-logo {
- display: flex;
- align-items: center;
- flex-shrink: 0;
- }
- .header-logo img {
- height: 38px;
- width: 38px;
- object-fit: cover;
- border-radius: 50%;
- filter: drop-shadow(0 0 8px rgba(200,168,75,0.4));
- }
+    .m-title {
+      font-size: clamp(1.6rem, 5vw, 2rem);
+      font-weight: 300;
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .m-title em { font-style: italic; color: #D4AF37; }
 
- .header-nav {
- display: flex;
- align-items: center;
- gap: 34px;
- list-style: none;
- position: absolute;
- left: 50%;
- transform: translateX(-50%);
- }
- .header-nav li { position: relative; }
- .header-nav a {
- font-family: 'DM Sans', sans-serif;
- font-size: 0.82rem;
- font-weight: 500;
- letter-spacing: 0.04em;
- color: #0d1520;
- transition: color 0.2s;
- white-space: nowrap;
- display: block;
- padding-bottom: 3px;
- }
- .header-nav a:hover { color: var(--gold); }
- .header-nav a.active {
- color: #0d1520;
- border-bottom: 2px solid var(--gold);
- }
+    .m-text {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 14px;
+    }
 
- .header-right {
- display: flex;
- align-items: center;
- gap: 16px;
- flex-shrink: 0;
- }
- .header-cart {
- width: 21px; height: 21px;
- color: #0d1520;
- transition: color 0.2s;
- cursor: pointer;
- flex-shrink: 0;
- }
- .header-cart:hover { color: var(--gold); }
+    .m-cta {
+      display: inline-block;
+      margin: 20px 0 16px;
+      padding: 14px 32px;
+      background: #D4AF37;
+      color: #0d141a;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      pointer-events: all;
+      transition: background 0.2s;
+    }
+    .m-cta:hover { background: #f1d371; }
 
- .burger {
- display: none;
- flex-direction: column;
- gap: 5px;
- cursor: pointer;
- background: none;
- border: none;
- padding: 4px;
- }
- .burger span {
- display: block;
- width: 24px; height: 2px;
- background: #0d1520;
- border-radius: 2px;
- transition: 0.3s;
- }
+    .m-countdown-wrap {
+      animation: mFadeUp 0.8s ease 1.5s both;
+      margin-top: 12px;
+    }
+    .m-countdown-label {
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(212,175,55,0.6);
+      margin-bottom: 4px;
+    }
+    .m-countdown {
+      font-size: 1.5rem;
+      font-weight: 300;
+      animation: softGlow 1s ease-in-out infinite;
+    }
 
- @media (max-width: 900px) {
- .header { padding: 0 20px; }
- .header-nav {
- display: none;
- position: fixed !important;
- top: 70px;
- left: 0 !important; right: 0;
- transform: none !important;
- background: #fdf6d8;
- flex-direction: column;
- align-items: flex-start;
- gap: 20px;
- padding: 28px 24px;
- border-top: 1px solid rgba(200,168,75,0.3);
- }
- .header-nav.open { display: flex; }
- .burger { display: flex; }
- }
+    .m-signature {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(212,175,55,0.15);
+    }
+    .m-signature-name {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.5);
+    }
 
- /* ═══════════════════════════════════════════════════
- HERO — image de fond, texte blanc avec shimmer doré
- ═══════════════════════════════════════════════════ */
- .hero-section {
- position: relative;
- background-image: url('hero.jpg');
- background-size: cover;
- background-position: center 30%;
- background-repeat: no-repeat;
- overflow: hidden;
- min-height: 680px;
- display: flex;
- align-items: center;
- justify-content: center;
- }
- .hero-section::before {
- content: '';
- position: absolute; inset: 0;
- background: linear-gradient(to bottom, rgba(13,21,32,0.45) 0%, rgba(13,21,32,0.15) 50%, rgba(13,21,32,0.55) 100%);
- z-index: 1;
- }
- .header-container {
- position: relative;
- z-index: 2;
- padding: 80px 30px;
- text-align: center;
- font-family: 'DM Sans', sans-serif;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- width: 100%;
- margin-top: 70px; /* compense le header fixe */
- }
-
- .shimmer-text {
- background: linear-gradient(90deg,
-   #ffffff 0%, #ffffff 30%,
-   #ffe88a 46%, #fff8d0 50%, #ffe88a 54%,
-   #ffffff 70%, #ffffff 100%);
- background-size: 250% auto;
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
- background-clip: text;
- animation: quantumSweep 8s linear infinite;
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(2.8rem, 8vw, 5.5rem);
- font-weight: 500;
- line-height: 1.1;
- margin: 0 auto 20px;
- text-transform: none;
- letter-spacing: 0.01em;
- font-style: italic;
- filter: drop-shadow(0 2px 28px rgba(0,0,0,0.75));
- text-align: center;
- width: 100%;
- }
-
- .hero-subtitle {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(1.1rem, 3.2vw, 1.8rem);
- font-weight: 400;
- font-style: italic;
- color: #ffffff;
- filter: drop-shadow(0 2px 12px rgba(0,0,0,0.8));
- margin-top: 18px;
- letter-spacing: 0.02em;
- }
-
- .shimmer-line {
- background: linear-gradient(90deg, transparent 0%, #C8A84B 50%, transparent 100%);
- background-size: 200% auto;
- animation: quantumSweep 4s linear infinite;
- height: 3px;
- width: 180px;
- margin: 22px auto 0;
- box-shadow: 0 0 15px rgba(200,168,75,0.5);
- border-radius: 2px;
- }
-
- @media (max-width: 600px) {
- .hero-section { min-height: 420px; background-position: center center; }
- .header-container { padding: 40px 16px; margin-top: 70px; }
- .shimmer-text { font-size: clamp(2.2rem, 10vw, 3rem); line-height: 1.15; text-align: center; }
- .shimmer-line { width: 120px; }
- }
-
- /* ═══════════════════════════════════════════════════
- SECTION MISSION — fond blanc, texte foncé
- ═══════════════════════════════════════════════════ */
- .mission-section {
- background-color: var(--bg);
- padding: 30px 15px;
- text-align: center;
- position: relative;
- overflow: hidden;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- }
- .mission-pulse {
- position: absolute;
- top: 50%; left: 50%;
- width: 600px; height: 600px;
- background: radial-gradient(circle, #C8A84B 0%, transparent 70%);
- border-radius: 50%;
- transform-origin: 0 0;
- z-index: 1;
- pointer-events: none;
- animation: heartPulseBG 4s ease-out infinite;
- }
- .mission-inner {
- width: 100%;
- max-width: 900px;
- position: relative;
- z-index: 2;
- }
- .mission-title {
- color: #ffffff;
- font-family: 'Cormorant Garamond', serif;
- font-weight: 300;
- text-transform: uppercase;
- font-size: clamp(1.3rem, 3.8vw, 2.2rem);
- line-height: 1.35;
- margin: 0;
- letter-spacing: 0.14em;
- }
- .mission-title .gold { color: #C8A84B; }
- .mission-divider {
- height: 1px;
- width: 80px;
- background-color: rgba(200,168,75,0.3);
- margin: 35px auto;
- }
-
- /* ═══════════════════════════════════════════════════
- SECTION A→B — fond légèrement teinté
- ═══════════════════════════════════════════════════ */
- .narrative-section {
- background-color: var(--bg);
- padding: 50px 20px;
- font-family: 'DM Sans', sans-serif;
- }
- .seo-narrative-container {
- max-width: 920px;
- margin: 0 auto;
- text-align: center;
- }
- .narrative-h {
- color: #ffffff;
- margin: 0;
- line-height: 1.35;
- text-transform: none;
- display: block;
- }
- .main-regret {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(2rem, 5.5vw, 3.2rem);
- font-weight: 500;
- font-style: italic;
- margin-bottom: 20px;
- }
- .sub-regret {
- font-size: clamp(1.1rem, 2.8vw, 1.6rem);
- font-weight: 400;
- margin-bottom: 10px;
- color: rgba(255,255,255,0.88);
- }
- .final-question {
- margin-top: 32px;
- padding-top: 28px;
- border-top: 1px solid rgba(200,168,75,0.3);
- font-size: clamp(1.25rem, 3.5vw, 2rem);
- font-weight: 500;
- color: #ffffff;
- word-break: normal;
- overflow-wrap: break-word;
- hyphens: auto;
- }
- .gold-highlight {
- animation: softGoldGlow 4s ease-in-out infinite;
- font-weight: 700;
- }
-
- /* ═══════════════════════════════════════════════════
- SECTION BIO — fond blanc, layout desktop 2 colonnes
- ═══════════════════════════════════════════════════ */
- .bio-section {
- background-color: var(--bg);
- padding: 60px 40px;
- font-family: 'DM Sans', sans-serif;
- color: #ffffff;
- }
- .bio-inner {
- max-width: 1100px;
- margin: 0 auto;
- display: flex;
- align-items: center;
- gap: 60px;
- }
- .bio-text-col { flex: 1; text-align: center; }
- .bio-photo-col { flex-shrink: 0; width: 260px; }
- .bio-photo-col img {
- width: 100%;
- border-radius: 4px;
- display: block;
- object-fit: cover;
- box-shadow: 0 4px 40px rgba(200,168,75,0.15);
- }
- .bio-photo-mobile {
- display: none;
- width: 200px;
- margin: 0 auto 24px;
- }
- .bio-photo-mobile img {
- width: 100%;
- border-radius: 4px;
- display: block;
- object-fit: cover;
- }
- .bio-name-seo {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(2rem, 5vw, 3rem);
- font-weight: 500;
- font-style: italic;
- margin: 0;
- line-height: 1.1;
- color: #ffffff;
- }
- .energy-line {
- height: 3px;
- width: 180px;
- margin: 20px auto 35px;
- background: linear-gradient(90deg, rgba(200,168,75,0.3) 0%, rgba(200,168,75,1) 50%, rgba(200,168,75,0.3) 100%);
- background-size: 200% 100%;
- animation: laserSweep 3s infinite linear;
- box-shadow: 0 0 15px rgba(200,168,75,0.4);
- border-radius: 2px;
- }
- .mission-text-seo {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(1.2rem, 3.5vw, 1.8rem);
- font-weight: 400;
- font-style: italic;
- line-height: 1.3;
- text-transform: none;
- max-width: 700px;
- margin: 0 auto 28px;
- color: rgba(255,255,255,0.9);
- }
- .description-seo {
- color: #ffffff;
- font-size: 1.0rem;
- line-height: 1.7;
- max-width: 700px;
- margin: 0 auto 16px;
- text-align: center;
- }
- .gold-list {
- color: #C8A84B;
- font-weight: 700;
- font-size: 1.1rem;
- margin: 10px 0 28px;
- letter-spacing: 1px;
- text-shadow: 0 0 12px rgba(200,168,75,0.3);
- }
- .final-statement {
- font-weight: 500;
- font-style: italic;
- color: #ffffff;
- font-size: 1.0rem;
- border-top: 1px solid rgba(200,168,75,0.25);
- padding-top: 24px;
- margin-top: 8px;
- max-width: 700px;
- margin-left: auto;
- margin-right: auto;
- line-height: 1.7;
- }
-
- /* ═══ ANIMATION SECTION ═══ */
- .spiral-section {
- background: var(--bg);
- padding: 60px 20px 50px;
- text-align: center;
- position: relative;
- }
- .spiral-title {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(2rem, 5vw, 3.6rem);
- font-weight: 300; font-style: italic;
- color: #ffffff; margin-bottom: 10px;
- letter-spacing: 0.04em; line-height: 1.1;
- }
- .spiral-subtitle {
- font-size: 0.95rem; font-weight: 400;
- color: rgba(255,255,255,0.55); margin-bottom: 90px;
- letter-spacing: 0.06em;
- }
-
- /* ── Scène : canvas pleine largeur en absolu, images par-dessus ── */
- .atom-scene-wrapper {
- position: relative;
- width: 100%;
- max-width: 1200px;
- margin: 0 auto;
- display: flex;
- align-items: center;
- justify-content: space-between;
- background: transparent;
- min-height: 220px;
- }
- /* Canvas pleine largeur derrière tout */
- #particlesMain {
- position: absolute;
- top: 0; left: 0;
- width: 100%; height: 100%;
- pointer-events: none;
- z-index: 0;
- display: block;
- }
- .scene-atom {
- flex: 0 0 26%;
- max-width: 260px;
- position: relative;
- z-index: 1;
- background: transparent;
- }
- .scene-atom img {
- width: 100%;
- height: auto;
- display: block;
- mix-blend-mode: screen;
- }
- .scene-atom-left img { transform: scaleX(-1); }
- .scene-heart {
- flex: 0 0 24%;
- max-width: 230px;
- position: relative;
- z-index: 1;
- background: transparent;
- display: flex;
- align-items: center;
- justify-content: center;
- }
- .scene-heart::before {
- content: '';
- position: absolute;
- top: 50%; left: 50%;
- transform: translate(-50%, -50%);
- width: 85%; padding-bottom: 85%; height: 0;
- border-radius: 50%;
- background: radial-gradient(circle,
-   rgba(200,140,20,0.55) 0%,
-   rgba(180,120,10,0.30) 35%,
-   rgba(150,95,5,0.12) 65%,
-   transparent 100%);
- z-index: 0;
- pointer-events: none;
- animation: haloPulse 0.95s ease-in-out infinite;
- }
- .scene-heart img {
- width: 100%;
- height: auto;
- display: block;
- mix-blend-mode: screen;
- position: relative;
- z-index: 1;
- animation: heartPulse 0.95s ease-in-out infinite;
- }
- @keyframes heartPulse {
- 0%,100% { transform: scale(1); }
- 15%      { transform: scale(1.07); filter: brightness(1.35); }
- 30%      { transform: scale(1.02); filter: brightness(1.10); }
- 45%      { transform: scale(1.05); filter: brightness(1.25); }
- 60%,100% { transform: scale(1); }
- }
- @keyframes haloPulse {
- 0%,100% { opacity:0.85; transform:translate(-50%,-50%) scale(1); }
- 15%      { opacity:1;    transform:translate(-50%,-50%) scale(1.18); }
- 30%      { opacity:0.88; transform:translate(-50%,-50%) scale(1.05); }
- 45%      { opacity:0.96; transform:translate(-50%,-50%) scale(1.12); }
- 60%,100% { opacity:0.85; transform:translate(-50%,-50%) scale(1); }
- }
- /* Cacher anciens canvas */
- .scene-particles, #particlesLeft, #particlesRight { display: none !important; }
- /* ── Cartes sous ── */
- .spiral-cards {
- display: flex; flex-direction: row;
- justify-content: center; gap: 14px; flex-wrap: wrap;
- margin: 32px auto 0; max-width: 1100px; padding: 0 16px;
- }
- .spiral-pair {
- display: flex; align-items: center; gap: 10px;
- background: rgba(13,21,32,0.65);
- border: 1px solid rgba(200,168,75,0.38);
- border-radius: 50px; padding: 11px 22px;
- box-shadow: 0 2px 20px rgba(200,168,75,0.10);
- backdrop-filter: blur(12px);
- transition: opacity 0.55s ease, transform 0.55s ease;
- flex: 0 1 auto;
- }
- .sp-before {
- font-family: 'Cormorant Garamond', serif;
- font-size: 16px; font-style: italic; font-weight: 300;
- color: rgba(255,255,255,0.48); white-space: nowrap;
- }
- .sp-arrow { color: var(--gold); font-size: 17px; flex-shrink: 0; margin: 0 4px; }
- .sp-after {
- font-family: 'Cormorant Garamond', serif;
- font-size: 19px; font-weight: 600; color: #ffffff; white-space: nowrap;
- }
- .spiral-liberté {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(1.8rem, 4vw, 2.8rem);
- font-weight: 600; font-style: italic;
- background: linear-gradient(120deg, #f9ecb4, #e8c45a, #b8962e, #e8c45a, #f9ecb4);
- background-size: 300% 300%;
- -webkit-background-clip: text; -webkit-text-fill-color: transparent;
- background-clip: text;
- animation: quantumSweep 5s linear infinite;
- letter-spacing: 0.1em;
- transition: opacity 0.55s ease, transform 0.55s ease;
- display: block;
- }
- #atomCanvasMobile { display: none; }
- @media (max-width: 700px) {
- .spiral-section { padding: 40px 12px 30px; }
- .atom-scene-wrapper {
-   flex-direction: column;
-   align-items: center;
-   min-height: 580px;
- }
- .scene-atom { flex: none; width: 65%; max-width: 230px; }
- .scene-heart { flex: none; width: 58%; max-width: 200px; }
- .scene-atom-left img { transform: none; }
- .spiral-cards { flex-direction: column; align-items: center; gap: 10px; }
- .spiral-pair { padding: 9px 18px; }
- .sp-before { font-size: 14px; }
- .sp-after { font-size: 17px; }
- }
-
-
- /* Switch A→B */
- .switch-section {
- background-color: var(--bg);
- padding: 70px 20px;
- font-family: 'DM Sans', sans-serif;
- position: relative;
- overflow: hidden;
- }
- .switch-section::before {
- content: '';
- position: absolute; top: 50%; left: 50%;
- transform: translate(-50%, -50%);
- width: 700px; height: 400px;
- background: radial-gradient(ellipse, rgba(200,168,75,0.07) 0%, transparent 70%);
- pointer-events: none;
- }
- .switch-inner { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
- .switch-title {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(2.2rem, 6vw, 4rem);
- font-weight: 300;
- text-align: center;
- color: #ffffff;
- margin-bottom: 8px;
- text-transform: none;
- letter-spacing: 0.04em;
- font-style: italic;
- line-height: 1.1;
- }
- .switch-divider {
- height: 3px; width: 120px;
- margin: 16px auto 36px;
- background: linear-gradient(90deg, rgba(200,168,75,0.2), rgba(200,168,75,1), rgba(200,168,75,0.2));
- background-size: 200% 100%;
- animation: laserGold 3s infinite linear;
- border-radius: 2px;
- box-shadow: 0 0 10px rgba(200,168,75,0.4);
- }
- .switch-rows { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
- .switch-row {
- display: flex; align-items: center;
- border: 1px solid rgba(200,168,75,0.2);
- border-radius: 12px; overflow: hidden;
- background: #fff;
- box-shadow: 0 2px 12px rgba(0,0,0,0.04);
- transition: border-color 0.25s, box-shadow 0.25s, transform 0.22s;
- }
- .switch-row:hover {
- border-color: var(--gold);
- box-shadow: 0 6px 28px rgba(200,168,75,0.18);
- transform: translateX(6px);
- }
- .sw-from {
- font-family: 'Cormorant Garamond', serif;
- font-size: 18px; font-weight: 300;
- font-style: italic;
- color: #555; padding: 20px 26px; flex: 1;
- letter-spacing: 0.04em;
- }
- .sw-arr {
- background: rgba(200,168,75,0.08);
- padding: 20px 20px; color: var(--gold);
- font-size: 20px; font-weight: 300;
- }
- .sw-to {
- font-family: 'Cormorant Garamond', serif;
- font-size: 22px; font-weight: 600;
- color: #ffffff; padding: 20px 26px; flex: 1.2;
- letter-spacing: 0.02em;
- }
- .switch-result {
- text-align: center; margin-top: 16px; padding: 26px 20px;
- background: linear-gradient(120deg, #f9ecb4, #e8c45a, #b8962e, #e8c45a, #f9ecb4);
- background-size: 300% 300%;
- animation: quantumSweep 6s linear infinite;
- border-radius: 14px;
- box-shadow: 0 6px 32px rgba(200,168,75,0.35);
- }
- .switch-result span {
- font-family: 'Cormorant Garamond', serif;
- font-size: 38px; font-weight: 600;
- color: var(--dark); letter-spacing: 0.1em;
- font-style: italic;
- }
-
- /* ═══════════════════════════════════════════════════
- SECTION OFFRES — même style offer-card
- ═══════════════════════════════════════════════════ */
- .together-section {
- background-color: var(--bg);
- padding: 50px 20px 10px;
- text-align: center;
- font-family: 'DM Sans', sans-serif;
- color: #ffffff;
- }
- .work-title {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(2.4rem, 6vw, 4.5rem);
- font-weight: 500;
- margin: 0;
- letter-spacing: 0.04em;
- line-height: 1.12;
- color: #ffffff;
- font-style: italic;
- }
- .energy-divider {
- height: 3px; width: 150px;
- margin: 20px auto 30px;
- background: linear-gradient(90deg, rgba(200,168,75,0.2) 0%, rgba(200,168,75,1) 50%, rgba(200,168,75,0.2) 100%);
- background-size: 200% 100%;
- animation: laserGold 3s infinite linear;
- border-radius: 2px;
- box-shadow: 0 0 10px rgba(200,168,75,0.4);
- }
- .work-subtitle-seo {
- font-family: 'DM Sans', sans-serif;
- font-size: clamp(1.0rem, 3vw, 1.3rem);
- font-weight: 300;
- max-width: 800px;
- margin: 0 auto 50px;
- line-height: 1.5;
- color: #ffffff;
- }
- .offers-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
- gap: 24px;
- max-width: 960px;
- margin: 0 auto 60px;
- }
- .offer-card {
- display: block;
- border-radius: 4px;
- overflow: hidden;
- transition: transform 0.3s, box-shadow 0.3s;
- box-shadow: 0 0 0 1px rgba(200,168,75,0.18);
- background: var(--dark);
- text-decoration: none;
- }
- .offer-card:hover {
- transform: translateY(-5px);
- box-shadow: 0 0 0 1px rgba(200,168,75,0.5), 0 8px 30px rgba(200,168,75,0.2);
- }
- .offer-card img {
- width: 100%; height: 280px; display: block; object-fit: cover; object-position: center;
- }
- .offer-body {
- padding: 20px 18px;
- }
- .offer-tag {
- display: inline-block;
- font-size: 9px; font-weight: 700; letter-spacing: 0.2em;
- text-transform: uppercase; color: var(--gold);
- background: rgba(200,168,75,0.1);
- border: 1px solid rgba(200,168,75,0.25);
- border-radius: 50px; padding: 4px 12px; margin-bottom: 10px;
- }
- .offer-title {
- font-family: 'Cormorant Garamond', serif;
- font-size: 28px; font-weight: 400;
- color: #fff; margin-bottom: 8px;
- font-style: italic;
- letter-spacing: 0.02em;
- }
- .offer-desc {
- font-family: 'DM Sans', sans-serif;
- font-size: 14px; color: rgba(255,255,255,0.82);
- line-height: 1.7; margin-bottom: 14px; font-weight: 300;
- }
- .offer-sep { width: 100%; height: 1px; background: rgba(200,168,75,0.2); margin: 14px 0; }
- .offer-price { font-size: 28px; font-weight: 800; color: var(--gold); margin-bottom: 3px; }
- .offer-meta { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 16px; }
- .offer-btn {
- display: block; width: 100%; padding: 13px 20px;
- border-radius: 50px; font-family: 'DM Sans', sans-serif;
- font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
- text-transform: uppercase; color: var(--dark); text-align: center;
- background: linear-gradient(120deg, #f9ecb4, #e8c45a, #b8962e, #e8c45a, #f9ecb4);
- background-size: 300% 300%;
- animation: quantumSweep 6s linear infinite;
- border: none; cursor: pointer;
- animation: quantumSweep 6s linear infinite, goldPulseBtn 4s ease-in-out infinite;
- transition: transform 0.2s;
- }
- .offer-btn:hover { transform: translateY(-1px); }
-
- @media (max-width: 768px) {
- .offers-grid { grid-template-columns: 1fr; max-width: 480px; }
- .together-section { padding: 30px 16px 0px; }
- .work-subtitle-seo { margin-bottom: 30px; font-size: 1rem; }
- .bio-section { padding: 30px 20px; }
- .bio-inner { flex-direction: column; gap: 0; }
- .bio-photo-col { display: none; }
- .bio-photo-mobile { display: block; }
- .bio-text-col { width: 100%; }
- }
-
- /* ═══════════════════════════════════════════════════
- CARROUSEL TÉMOIGNAGES
- ═══════════════════════════════════════════════════ */
- .temoignages-section {
- background-color: var(--bg);
- padding: 10px 20px 60px;
- font-family: 'DM Sans', sans-serif;
- }
- .tem-section-title {
- font-family: 'Cormorant Garamond', serif;
- font-size: clamp(2.4rem, 6vw, 4.5rem);
- font-weight: 500;
- font-style: italic;
- text-align: center;
- color: #ffffff;
- margin-bottom: 18px;
- text-transform: none;
- letter-spacing: 0.02em;
- }
- .tem-section-sub {
- text-align: center;
- font-size: 1rem;
- color: #ffffff;
- margin-bottom: 55px;
- font-weight: 400;
- opacity: 0.7;
- line-height: 1.7;
- }
- .carousel-outer { max-width: 820px; margin: 0 auto; }
- .carousel-track-wrap { overflow: hidden; border-radius: 4px; }
- .carousel-track { display: flex; transition: transform 0.5s cubic-bezier(0.25,0.1,0.25,1); }
- .c-slide { min-width: 100%; padding: 2px; }
- .c-card {
- background: linear-gradient(135deg, #f0d56a 0%, #f9ecb4 30%, #e8c45a 55%, #b89a2a 80%, #b8962e 100%);
- border-radius: 4px;
- padding: 38px 40px 32px;
- position: relative;
- overflow: hidden;
- box-shadow: 0 8px 40px rgba(200,168,75,0.25), 0 2px 8px rgba(0,0,0,0.08);
- }
- .c-card::before {
- content: '';
- position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
- background: linear-gradient(105deg, transparent, rgba(255,255,255,0.22), transparent);
- animation: laserSweep 5s ease-in-out infinite;
- }
- .c-quote-mark {
- font-family: 'Cormorant Garamond', serif;
- font-size: 48px; line-height: 1;
- color: rgba(0,0,0,0.12);
- position: absolute; top: 16px; left: 20px;
- font-weight: 300; font-style: italic;
- pointer-events: none;
- }
- .c-text {
- font-family: 'DM Sans', sans-serif;
- font-size: 16px; font-weight: 300;
- font-style: italic;
- color: var(--dark);
- line-height: 1.85; margin-bottom: 28px;
- position: relative; z-index: 1;
- }
- .c-text strong { color: rgba(0,0,0,0.85); font-weight: 700; font-style: normal; }
- .c-sep { width: 100%; height: 1px; background: rgba(0,0,0,0.15); margin-bottom: 16px; }
- .c-name {
- font-size: 11px; font-weight: 700;
- letter-spacing: 0.22em; text-transform: uppercase;
- color: rgba(0,0,0,0.55);
- }
- .carousel-ctrl {
- display: flex; align-items: center; justify-content: center;
- gap: 18px; margin-top: 24px;
- }
- .c-btn {
- width: 44px; height: 44px; border-radius: 50%;
- border: 1px solid rgba(200,168,75,0.35);
- background: transparent; color: var(--gold);
- font-size: 18px; cursor: pointer;
- display: flex; align-items: center; justify-content: center;
- transition: all 0.2s;
- }
- .c-btn:hover { background: rgba(200,168,75,0.1); border-color: var(--gold); }
- .c-count { font-size: 13px; font-weight: 600; color: #ffffff; opacity: 0.6; min-width: 52px; text-align: center; }
- .c-dots { display: flex; gap: 5px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
- .c-dot {
- width: 6px; height: 6px; border-radius: 50%;
- background: rgba(200,168,75,0.25); border: none; cursor: pointer;
- padding: 0; transition: all 0.3s;
- }
- .c-dot.on { background: var(--gold); width: 20px; border-radius: 3px; }
-
- /* ═══════════════════════════════════════════════════
- FOOTER — même structure 3 colonnes que millionnairedecoeur
- ═══════════════════════════════════════════════════ */
- .footer {
- background-color: #fdf6d8;
- border-top: 1px solid rgba(200,168,75,0.25);
- padding: 50px 40px 36px;
- font-family: 'DM Sans', sans-serif;
- color: #ffffff;
- }
- .footer-grid {
- max-width: 1100px;
- margin: 0 auto;
- display: grid;
- grid-template-columns: 1fr 2fr 1fr;
- gap: 40px;
- align-items: start;
- }
- .footer-label {
- font-size: 0.72rem; font-weight: 700;
- letter-spacing: 0.18em; text-transform: uppercase;
- color: #0d1520; margin-bottom: 8px;
- }
- .footer-email {
- font-size: 0.82rem; color: #0d1520;
- display: block; margin-bottom: 28px; transition: color 0.2s;
- }
- .footer-email:hover { color: var(--gold); }
- .footer-social-label {
- font-size: 0.72rem; font-weight: 700;
- letter-spacing: 0.12em; text-transform: uppercase;
- color: #0d1520; margin-bottom: 14px; line-height: 1.4;
- }
- .footer-social-icons { display: flex; gap: 18px; align-items: center; }
- .footer-social-icons a { color: #0d1520; transition: color 0.25s; display: flex; align-items: center; }
- .footer-social-icons a:hover { color: var(--gold); }
- .footer-social-icons svg { width: 22px; height: 22px; fill: currentColor; }
- .footer-center { text-align: center; }
- .footer-logo-img {
- width: 46px; height: 46px; object-fit: cover;
- margin: 0 auto 18px; display: block; border-radius: 50%;
- filter: drop-shadow(0 0 8px rgba(200,168,75,0.35));
- }
- .footer-legal-text {
- font-family: 'DM Sans', sans-serif; font-weight: 300;
- font-size: 0.67rem; color: #0d1520; line-height: 1.75; margin-bottom: 10px;
- }
- .footer-legal-text a { color: #0d1520; text-decoration: underline; transition: color 0.2s; }
- .footer-legal-text a:hover { color: var(--gold); }
- .footer-disclaimer { font-size: 0.64rem; color: rgba(13,21,32,0.7); line-height: 1.6; margin-top: 14px; opacity: 0.7; }
- .footer-right { text-align: right; }
- .footer-nav-links { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
- .footer-nav-links a { font-size: 0.82rem; color: #0d1520; transition: color 0.2s; }
- .footer-nav-links a:hover { color: var(--gold); }
-
- @media (max-width: 768px) {
- .footer { padding: 36px 20px 24px; }
- .footer-grid {
- grid-template-columns: 1fr;
- gap: 28px; display: flex; flex-direction: column;
- align-items: center; width: 100%;
- }
- .footer-left { text-align: center; width: 100%; order: 1; }
- .footer-right { text-align: center !important; width: 100%; order: 2; }
- .footer-center { text-align: center; width: 100%; order: 3; }
- .footer-social-icons { justify-content: center; }
- .footer-nav-links { align-items: center; }
- }
-
- </style>
+    @media (max-width: 480px) {
+      #lpdc-modal { padding: 24px 20px; }
+      .m-title { font-size: 1.4rem; }
+      .m-text { font-size: 0.82rem; }
+    }
+  </style>
 </head>
-
 <body>
 
- <!-- ═══════ HEADER ═══════ -->
- <header class="header" role="banner">
- <a href="https://www.lapuissanceducoeur.com/" class="header-logo" aria-label="La Puissance du Cœur - Accueil">
- <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/ALpPyNM14ztzNo1g/black-white-circle-bee-icon-food-logo-1-AQEZPLEa3gUx2pzB.jpg" alt="La Puissance du Cœur" />
- </a>
-
- <ul class="header-nav" id="headerNav" role="navigation" aria-label="Navigation principale">
- <li><a href="https://www.lapuissanceducoeur.com/" class="active">Accueil</a></li>
- <li><a href="https://www.lapuissanceducoeur.com/offres-liberation-emotionnelle-quantique">Services</a></li>
- <li><a href="https://www.lapuissanceducoeur.com/articles-liberation-emotionnelle">Articles</a></li>
- <li><a href="https://www.lapuissanceducoeur.com/contact-liberation-emotionnelle">Contact</a></li>
- </ul>
-
- <div class="header-right">
- <a href="https://www.lapuissanceducoeur.com/offres-liberation-emotionnelle-quantique" aria-label="Services">
- <svg class="header-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
- <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
- <line x1="3" y1="6" x2="21" y2="6"/>
- <path d="M16 10a4 4 0 01-8 0"/>
- </svg>
- </a>
- <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
- <span></span><span></span><span></span>
- </button>
- </div>
- </header>
-
-
- <!-- ═══════ HERO ═══════ -->
- <section class="hero-section" aria-labelledby="hero-title">
- <div class="header-container">
- <h1 class="shimmer-text" id="hero-title">
- Transformez vos blessures en puissance
- </h1>
- <div class="shimmer-line" aria-hidden="true"></div>
- </div>
- </section>
-
-
- <!-- ═══════ MISSION ═══════ -->
- <section class="mission-section" aria-label="Mission">
- <div class="mission-pulse" aria-hidden="true"></div>
- <div class="mission-inner">
- <h2 class="mission-title">
- TOUT COMMENCE LE JOUR OÙ VOUS ARRÊTEZ<br>
- DE FUIR VOTRE <span class="gold">CŒUR</span>.
- </h2>
- <div class="mission-divider" aria-hidden="true"></div>
- <h3 class="mission-title">
- C'EST UNE QUESTION DE <span class="gold">FRÉQUENCES</span> —<br>
- ET JE TRAVAILLE AVEC LES PLUS PUISSANTES QUI SOIENT.
- </h3>
- </div>
- </section>
-
-
- <!-- ═══════ NARRATIF A→B ═══════ -->
- <section class="narrative-section" aria-label="Votre réalité">
- <div class="seo-narrative-container">
- <h3 class="narrative-h main-regret">
- Vous avez tout essayé.<br>Rien n'a vraiment changé.
- </h3>
- <h4 class="narrative-h sub-regret">Des thérapies. Des stages. Des soins. Des années parfois.</h4>
- <h4 class="narrative-h sub-regret">Et la même chose recommence.</h4>
- <h4 class="narrative-h sub-regret">Parce que personne n'est encore allé à la vraie racine.</h4>
- <h3 class="narrative-h final-question" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;">
- Et vous... jusqu'où allez-vous continuer à porter<br>ce qui ne vous appartient <span class="gold-highlight">même pas</span> ?
- </h3>
- </div>
- </section>
-
-
- <!-- ═══════ BIO MARIA ═══════ -->
- <section class="bio-section" aria-labelledby="bio-name">
- <div class="bio-inner">
- <div class="bio-text-col">
- <div class="bio-photo-mobile">
- <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=428,fit=crop/ALpPyNM14ztzNo1g/677d8e81d4ebc44489d916e1-2-dWxO1EyyMDH1Me8R.jpeg" alt="Maria Francheteau" />
- </div>
- <h2 class="bio-name-seo" id="bio-name">Maria Francheteau.</h2>
- <div class="energy-line" aria-hidden="true"></div>
- <h3 class="mission-text-seo">Coach en libération émotionnelle quantique &amp; transformation intérieure.</h3>
- <p class="description-seo">
- Je suis Maria Francheteau. Depuis plusieurs années, j'explore, j'intègre et je transmets une approche unique — au croisement du cœur, de l'énergie et de la conscience.
- </p>
- <p class="description-seo">
- J'ai vécu ce que vous vivez. Je m'en suis libérée. Et j'ai trouvé ce dont vous avez besoin pour vous libérer vous aussi.
- </p>
- <p class="description-seo" style="margin-bottom:6px;">
- Mon outil est l'énergie quantique du cœur — la plus puissante en termes de fréquences de libération. Ce que je fais, c'est ultra puissant, ultra précis, ultra rapide. Les résultats :
- </p>
- <p class="gold-list">Clarté . Énergie . Alignement . Puissance . Libération . Paix.</p>
- <p class="final-statement">
- "Mon super pouvoir est de faire le choix de mon cœur — pour amener les autres à faire le choix du leur."
- </p>
- </div>
-
- <div class="bio-photo-col">
- <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=428,fit=crop/ALpPyNM14ztzNo1g/677d8e81d4ebc44489d916e1-2-dWxO1EyyMDH1Me8R.jpeg" alt="Maria Francheteau – Coach en libération émotionnelle quantique" />
- </div>
- </div>
- </section>
-
-
- <!-- ═══════ ATOM TRANSFORMATION ═══════ -->
- <section class="spiral-section" aria-label="La transformation">
- <h2 class="spiral-title">Votre transformation.</h2>
- <div class="spiral-subtitle">De ce qui enchaîne — à ce qui libère.</div>
-
- <div class="atom-scene-wrapper" id="spiralContainer">
- <canvas id="particlesMain"></canvas>
- <!-- Atome gauche -->
- <div class="scene-atom scene-atom-left">
- <img src="atom2.png" alt="" aria-hidden="true" />
- </div>
- <!-- Cœur anatomique central -->
- <div class="scene-heart">
- <img src="heart.png" alt="Cœur quantique" />
- </div>
- <!-- Atome droit -->
- <div class="scene-atom scene-atom-right">
- <img src="atom1.png" alt="" aria-hidden="true" />
- </div>
- </div>
-
- <!-- Cartes sous l'animation -->
- <div class="spiral-cards" id="spiralWords">
- <div class="spiral-pair" id="sp0" style="opacity:0;transform:translateY(20px)">
- <span class="sp-before">Confusion</span>
- <span class="sp-arrow">→</span>
- <span class="sp-after">Clarté</span>
- </div>
- <div class="spiral-pair" id="sp1" style="opacity:0;transform:translateY(20px)">
- <span class="sp-before">Blessure</span>
- <span class="sp-arrow">→</span>
- <span class="sp-after">Paix</span>
- </div>
- <div class="spiral-pair" id="sp2" style="opacity:0;transform:translateY(20px)">
- <span class="sp-before">Peur</span>
- <span class="sp-arrow">→</span>
- <span class="sp-after">Cœur</span>
- </div>
- <div class="spiral-pair" id="sp3" style="opacity:0;transform:translateY(20px)">
- <span class="sp-before">Sacrifice</span>
- <span class="sp-arrow">→</span>
- <span class="sp-after">Souveraineté</span>
- </div>
- </div>
- <div class="spiral-liberté" id="sp4" style="opacity:0;transform:translateY(20px);margin-top:18px;">Liberté</div>
- </section>
-
-
- <!-- ═══════ OFFRES ═══════ -->
- <section class="together-section" aria-labelledby="together-title">
- <h2 class="work-title" id="together-title">Choisissez votre transformation.</h2>
- <div class="energy-divider" aria-hidden="true"></div>
- <h3 class="work-subtitle-seo">
- Chaque session va là où rien d'autre ne va — ultra précis, ultra rapide, ultra puissant.
- </h3>
-
- <div class="offers-grid">
-
- <a href="https://www.lapuissanceducoeur.com/guidance-de-lame" class="offer-card" aria-label="Lumière">
- <img src="guidance.jpg" alt="Lumière – Session audio 30 min" />
- <div class="offer-body">
- <span class="offer-tag">Session audio · 30 min</span>
- <div class="offer-title">Lumière</div>
- <div class="offer-desc">Eclaircir une situation compliquée ou un blocage dans votre vie</div>
- <div class="offer-sep"></div>
- <div class="offer-price">40 €</div>
- <div class="offer-meta">30 minutes · En 1 ou 3 fois · Par audio sur Whatsapp</div>
- <div class="offer-btn">Je découvre l'accompagnement</div>
- </div>
- </a>
-
- <a href="https://www.lapuissanceducoeur.com/soin-quantique" class="offer-card" aria-label="Équilibre">
- <img src="soinquantique.jpg" alt="Équilibre – Session visio 45 min" />
- <div class="offer-body">
- <span class="offer-tag">Session visio · 45 min</span>
- <div class="offer-title">Équilibre</div>
- <div class="offer-desc">Rééquilibrage énergétique, émotionnel et physique</div>
- <div class="offer-sep"></div>
- <div class="offer-price">70 €</div>
- <div class="offer-meta">45 minutes · En 1 ou 3 fois · En visio sur Whatsapp</div>
- <div class="offer-btn">Je découvre l'accompagnement</div>
- </div>
- </a>
-
- <a href="https://www.lapuissanceducoeur.com/coeur-corps-esprit" class="offer-card" aria-label="Libération">
- <img src="coeurcorpsesprit.jpg" alt="Libération – Session visio 2h" />
- <div class="offer-body">
- <span class="offer-tag">Session visio · 2h</span>
- <div class="offer-title">Libération</div>
- <div class="offer-desc">Libération émotionnelle quantique et nettoyage karmique profond</div>
- <div class="offer-sep"></div>
- <div class="offer-price">200 €</div>
- <div class="offer-meta">2h · En 1 ou 3 fois · En visio sur Whatsapp</div>
- <div class="offer-btn">Je découvre l'accompagnement</div>
- </div>
- </a>
-
- <a href="https://www.lapuissanceducoeur.com/immersion-quantique" class="offer-card" aria-label="Immersion">
- <img src="immersionquantique.jpg" alt="Immersion – 8 jours" />
- <div class="offer-body">
- <span class="offer-tag">Immersion · 8 jours</span>
- <div class="offer-title">Immersion</div>
- <div class="offer-desc">Libérez-vous de vos Blessures et Peurs et Activez votre Mission d'Âme &amp; votre Super Pouvoir</div>
- <div class="offer-sep"></div>
- <div class="offer-price">800 €</div>
- <div class="offer-meta">8 jours · En 1 ou 3 fois · Par audios et écrits sur Whatsapp</div>
- <div class="offer-btn">Je découvre l'accompagnement</div>
- </div>
- </a>
-
- <a href="https://www.lapuissanceducoeur.com/saut-quantique" class="offer-card" aria-label="Élévation">
- <img src="sautquantique.jpg" alt="Élévation – Programme 3 mois" />
- <div class="offer-body">
- <span class="offer-tag">Programme · 10h · 3 mois</span>
- <div class="offer-title">Élévation</div>
- <div class="offer-desc">Reprogrammation, Shift &amp; Saut Quantiques — 5 séances sur 3 mois pour sortir de vos anciens schémas, reprendre votre puissance et incarner la version de vous que vous attendez.</div>
- <div class="offer-sep"></div>
- <div class="offer-price">800 €</div>
- <div class="offer-meta">10h · En 1 ou 3 fois · En visio sur Whatsapp</div>
- <div class="offer-btn">Je découvre l'accompagnement</div>
- </div>
- </a>
-
- </div>
- </section>
-
-
- <!-- ═══════ TÉMOIGNAGES CARROUSEL 44 ═══════ -->
- <section class="temoignages-section" aria-label="Témoignages">
- <h2 class="tem-section-title">Leurs mots.<br>Leur vérité.</h2>
- <p class="tem-section-sub">Rien d'inventé.<br>Juste la résonance du réel.</p>
-
- <div class="carousel-outer">
- <div class="carousel-track-wrap">
- <div class="carousel-track" id="ct">
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Je suis très émue. Même quelques heures après ma séance, l'émotion est encore intense. Le passé, le présent, le futur. Les blessures, les peurs et les blocages. Tout est devenu évidence grâce à son don puissant et précis. <strong>Tout vibre encore en moi. Tout fait sens.</strong> Merci Maria. Merci d'oser être qui tu es. Tu as un don extraordinaire.</p>
- <div class="c-sep"></div><div class="c-name">Valérie.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">C'était tellement whouha !!! Merci Maria, pour avoir mis en lumière, grâce à cette séance, ce que depuis plusieurs années, je m'efforce d'enterrer bien profond. Tu m'as délivré un message de mon cœur... j'en pleure en écrivant ces mots. <strong>J'ai l'impression qu'il a explosé (hurlé) comme s'il avait été bâillonné pendant des années.</strong> La connexion que tu as pratiquée sur mon cœur, en direct, était impressionnante. Je ressentais cette vibration, cette bulle indescriptible qui tournait dans ma poitrine. Merci Maria pour tout ce que tu fais, merci à nos guides. MERCI.</p>
- <div class="c-sep"></div><div class="c-name">Marie-Pierre.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'ai fait appel à Maria lors d'une période très difficile de ma vie, où les difficultés s'enchaînaient et se cumulaient. J'avais la sensation d'être prise en étau, physiquement parlant, et je passais mon temps à cogiter et ressasser en boucle. Après une séance de deux heures avec Maria, <strong>je me suis sentie à nouveau légère et libérée de ce poids. Comme je ne l'avais pas ressenti depuis des mois.</strong> Mes pensées négatives ont cessé de tourner dans ma tête. Je me sens apaisée et confiante de nouveau. Je dirais presque que je revis.</p>
- <div class="c-sep"></div><div class="c-name">Candice.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">En seulement 30 minutes et sans rien connaître de moi, Maria à su se connecter et percevoir une de mes plus grosses problématiques de vie. Elle a pu me donner le pourquoi et le comment. <strong>Plus rapide et plus efficace que des années de psychothérapie</strong>, je la recommande les yeux fermés !</p>
- <div class="c-sep"></div><div class="c-name">Jonathan.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Depuis hier je me sens nouvellement née. Je fuyais ma mission de vie parce que je me disais que je n'avais pas les compétences. Mais le fait d'avoir mis la lumière sur mon super pouvoir et ma mission de vie m'a libérée de ces peurs et doutes. <strong>Depuis hier je me sens plus légère, plus épanouie, plus libre.</strong> J'accepte tout ce que j'ai traversé dans mon passé avec joie, amour et paix. Merci infiniment Maria.</p>
- <div class="c-sep"></div><div class="c-name">Colette.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Maria est d'une puissance extraordinaire. Je fais pourtant parti de ceux qui ne croit pas à la spiritualité, à l'éveil. Mais Maria m'a mis claque sur claque durant nos deux visios. Grâce à ça, <strong>je me sens sûr de mes forces et surtout lavé de mes grosses blessures.</strong> Un nouveau chemin s'ouvre à moi et je le dois en parti à Maria. Merci pour tout.</p>
- <div class="c-sep"></div><div class="c-name">Axel.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Je ne savais pas que ces choses-là étaient possibles. Mon expérience avec Maria était... DIVINE. Laisser parler son âme et guérir de ses blessures d'enfance et antérieure à été pour moi <strong>la plus merveilleuse expérience de ma vie.</strong> Un grand merci de fond du cœur Maria, je suis enfin prête à renaître.</p>
- <div class="c-sep"></div><div class="c-name">Sandra.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Un immense merci à Maria pour sa très grande compétence, sa bienveillance, sa disponibilité et sa gentillesse ! La séance a été très intense, séance pendant laquelle elle commence par cerner parfaitement qui l'on est, c'est impressionnant ! Tout ce qu'elle a dit et qu'elle ressentait était parfaitement juste. <strong>Ce fut une expérience extraordinaire. Maria donne de précieux conseils, tout est clair dans ses mots, elle vise juste, c'est bluffant.</strong> Vous pouvez vraiment la consulter les yeux fermés !</p>
- <div class="c-sep"></div><div class="c-name">Jérémy.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Maria, cette séance que nous avons faite a été un éclairage monumental sur ce que je vivais depuis des années. <strong>Le rendez-vous a permis un début de déblocage de situation très rapide.</strong> Pendant la séance, je me suis sentie comme tirée par le haut et mes douleurs ont été soulagées. Je suis plus que ravie de ma décision de travailler avec toi. Au passage, la situation de mon fils a commencé à se débloquer aussi. Merci Merci Merci.</p>
- <div class="c-sep"></div><div class="c-name">Corine.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">La 1ère séance a été tellement puissante qu'elle m'a rempli d'émotions vives et surtout j'ai pu me libérer de la lourdeur de mon histoire familiale qui me faisait souffrir jusqu'à aujourd'hui ! Toutes les larmes versées m'ont permis de me libérer de mon passé et c'est le plus beau cadeau que je pouvais m'offrir ! <strong>La lourdeur sombre et obscure que j'avais en moi a laissé place à la lumière, aux émotions positives et à l'amélioration de ma santé !</strong> Plus de migraine, de douleurs abdominales... Plus de fatigue, j'ai retrouvé l'énergie, la motivation, la détermination...</p>
- <div class="c-sep"></div><div class="c-name">Sandrine.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Merci à Maria pour son aide et sa justesse. J'ai eu la chance d'être accompagné par Maria et je voulais souligner sa justesse et sa capacité à faire passer les bons messages pour m'aider à faire passer des blocages et me faire avancer sur mon chemin. <strong>J'ai eu l'impression d'être compris et cela m'a permis de m'ouvrir pour être plus aligné dans mon business et avec moi-même.</strong> Merci beaucoup.</p>
- <div class="c-sep"></div><div class="c-name">Alexis.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Sans lui donner d'informations de ma vie, elle a su lire une partie des points me bloquant de part mes croyances. Tout était tellement cohérent que j'en ai été touché, me confirmant que tout est plus profond que ce qu'on peut penser. <strong>Elle a su faire surgir des maux, des limites que je pouvais avoir. Je recommande vraiment ses très puissantes capacités de medium.</strong></p>
- <div class="c-sep"></div><div class="c-name">Maxime.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'étais perdue, je me cherchais. J'avais le sentiment de n'avoir aucun don. Pas malheureuse mais pas accomplie. Maria est arrivée dans ma vie comme une bouffée d'air frais. <strong>Elle m'a fait découvrir mon âme profonde. Transmis mes super pouvoirs et mon chemin de vie.</strong> J'apprends désormais à développer mon intuition. Mes peurs se sont apaisées. Je reprend confiance en moi. Merci d'avoir activé cette merveilleuse énergie !</p>
- <div class="c-sep"></div><div class="c-name">Valérie.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Cette séance m'a permis de prendre conscience que j'étais bel et bien sur la bonne voie, à accomplir déjà la mission qui est la mienne. Cette confirmation a levé bien des doutes, me permettant d'avancer plus sereinement. La découverte de mon pouvoir a été une vraie révélation. <strong>Depuis que j'aligne ce don, avec mon message et ma mission, chaque décision, chaque pas est juste et fluide.</strong></p>
- <div class="c-sep"></div><div class="c-name">Marie.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Merci d'accepter d'être qui tu es dans une ère paradoxale. Merci d'être toi car ton exemple m'encourage, me donne la force et la confiance d'être moi, avec ma facette spirituelle et business. <strong>Merci également pour le contenu des messages que tu m'as délivré. C'est précis, détaillé, puissant, bluffant.</strong> J'ai déjà pris des décisions business, récemment, sur la base de nos échanges et elles s'avèrent justes. Mille fois merci !</p>
- <div class="c-sep"></div><div class="c-name">Sydney.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Comme si vous avez enlevé un voile qui était sous mes yeux pendant des années, J'ai pu voir les choses qui m'ont bloquée dans la vie. Avant de faire la consultation j'ai dit que personne ne peut déchiffrer ma vie et ce qui m'est arrivé après, <strong>quand vous m'avez donné les détails j'étais bouche bée. C'est merveilleux ce que vous faites.</strong> Gratitude. Merci.</p>
- <div class="c-sep"></div><div class="c-name">Zohra.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'ai eu une séance de reconnexion au cœur avec Maria afin de guérir mes blessures émotionnelles. Elle a lu en moi comme dans un livre ouvert. Pendant la séance on a beaucoup parlé, je ressentais beaucoup d'énergies positives. <strong>À chaque fois que je repense à la séance je ressens du bien-être et de l'espoir comme si Maria m'envoyait toujours sa lumière.</strong> Merci à cette fée des temps modernes.</p>
- <div class="c-sep"></div><div class="c-name">Anaïs.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'avais déjà effectué plusieurs soins avec d'autres personnes auparavant mais c'est la première fois que j'ai vécu <strong>un soin aussi profond et précis. Sans rien savoir de moi, elle a su me dire tout à travers le soin de mon enfance jusqu'à maintenant.</strong> Vous qui êtes en quête de guérison, vous pouvez lui faire confiance et la contacter. Maria merci encore. Vous êtes un vrai don.</p>
- <div class="c-sep"></div><div class="c-name">Jemy.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Maria vous enveloppe de sa présence bienveillante et canalise rapidement vos blocages. <strong>Une sensation d'apaisement rapide, mon excitation mentale s'est mise en pause.</strong> Une femme ancrée et connectée, je recommande.</p>
- <div class="c-sep"></div><div class="c-name">Séverine.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Plus qu'un soin énergétique, Maria est une personne bienveillante très douce et à l'écoute. <strong>Très belle rencontre ! Merci à l'univers de m'avoir guidé vers cette belle Âme.</strong> Mille merci Maria et à bientôt.</p>
- <div class="c-sep"></div><div class="c-name">Christine.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Je recommande les yeux fermés, Maria a su faire ressortir mes problématiques personnelles, très bienveillante, elle a su me mettre à l'aise. <strong>Un soin d'une grande exception. Impressionnant. N'hésitez plus, vous vous remercierez…</strong></p>
- <div class="c-sep"></div><div class="c-name">Lisa.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'ai été septique de prendre rdv. Maria a une voix très douce, elle donne confiance dès le début. <strong>Elle a trouvé ma blessure d'âme sans rien savoir sur moi.</strong> Je compte reprendre contact avec Maria pour ma mission de vie et mon super pouvoir pour aller dans la bonne direction.</p>
- <div class="c-sep"></div><div class="c-name">Eva.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Au delà de la bienveillance, de l'écoute et la chaleur que j'ai pu ressentir lors de ces séances, <strong>je suis surprise par la pertinence, la justesse et la finesse du message qu'elle délivre. Tous ses mots ont sonné très juste par rapport à mon passé, mon vécu et mon ressenti.</strong> Je ressors de ces consultations forte d'une énergie retrouvée, d'une meilleure connaissance de moi-même.</p>
- <div class="c-sep"></div><div class="c-name">Hélène.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'ai vécu une incroyable expérience avec Maria Elle a un don extraordinaire ! À l'issue de la séance, j'étais déjà dans un processus de mieux être et ai pu mettre des "mots sur mes maux" inconscients. <strong>J'ai été impressionné par la véracité de ce qu'elle a pu canaliser, sans même connaître mon histoire. Je recommande à 1000% !</strong></p>
- <div class="c-sep"></div><div class="c-name">Anaïs.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Incroyable ! En mettant le doigt sur certains pourquoi, en annonçant ma mission de vie, j'ai eu très vite des changements clairs de mon état. <strong>Je me sens tout simplement mieux, plus heureux, plus joyeux.</strong> J'avais pour demande un travail sur l'ouverture émotionnelle et wahhou tout se débloque de jour en jour. Merci à toi Maria pour ton aide et ton accompagnement.</p>
- <div class="c-sep"></div><div class="c-name">Jonathan.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Je ne savais pas vraiment à quoi m'attendre en prenant rendez-vous avec Maria et je peux vous dire que le voyage était intense ! J'ai pu confirmer ma mission de vie, j'ai recréé des liens que je pensais définitivement rompus. <strong>Même le sceptique que j'étais vous le recommande chaudement, vous me remercierez plus tard !</strong></p>
- <div class="c-sep"></div><div class="c-name">Gaël.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Ce que tu m'as dit m'a fait repenser à certaines choses de mon passé qui me bloquent et je sens que ça va en grande partie me libérer pour mes résultats mais surtout pour mon bien être. <strong>Tu as vraiment eu un grand impact.</strong> Tu es généreuse dans tes conseils et tu es alignée à tes valeurs — c'est quelque chose que j'ai ressenti et qui est très important pour moi. Merci encore pour tout.</p>
- <div class="c-sep"></div><div class="c-name">Miquel.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Je me sens tellement apaisée — moi qui pendant de très longues années ressentais un poids très lourd concernant mon histoire familiale, tant côté paternel que maternel. <strong>C'est le plus beau cadeau que tu puisses me faire !</strong> Du fond du cœur merci.</p>
- <div class="c-sep"></div><div class="c-name">Sandrine.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'avais décidé d'avoir un premier soin avec Maria pour m'aider à débloquer tout mon système lymphatique qui ne fonctionne pas. Depuis mon soin <strong>je me sens libéré, je n'ai plus ce point dans la poitrine. J'arrive simplement à aller vers les autres sans gêne.</strong> J'avais peur de donner mon point de vue, peur de ne pas trouver les bons mots. Plus maintenant.</p>
- <div class="c-sep"></div><div class="c-name">Manuella.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Une expérience passionnante à vivre absolument pour se libérer de ses schémas répétitifs. <strong> Merci Maria </strong></p>
- <div class="c-sep"></div><div class="c-name">Valérie.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Ce qu'elle canalise est incroyable, elle vous dira des vérités sans vous connaître et vous aiguillera sur votre véritable chemin. <strong>Ses conseils sont d'une grande aide !</strong> Maria est une personne bienveillante et sympathique avec qui on se sent tout de suite à l'aise.</p>
- <div class="c-sep"></div><div class="c-name">Cindy.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Je découvre une grande cohérence dans mes incohérences que tu m'as révélées, mes non-dits dans lesquels je me cachais dans le noir pour ne pas me confronter à la réalité. <strong>La lumière est là, je sais ce que j'ai à faire.</strong> Merci, merci, merci.</p>
- <div class="c-sep"></div><div class="c-name">David.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'ai pu me faire confiance et foncer sur mon chemin. <strong>Maria est d'une précision incroyable.</strong> Je suis heureuse qu'elle soit sur mon chemin car son expertise est hors pair. Merci du fond du cœur.</p>
- <div class="c-sep"></div><div class="c-name">Marion.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Pendant notre entretien la guidance a eu une telle résonnance que je n'ai pas les mots pour vous expliquer l'émotion que j'ai ressenti à ce moment là. <strong>Elle a su lire en moi comme dans un bouquin et ainsi révéler tout le potentiel qui était en sommeil durant ces dernières années.</strong> Merci infiniment Maria !</p>
- <div class="c-sep"></div><div class="c-name">Pascal.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">C'était une séance magique, comme un moment hors du temps où j'ai pu me reconnecter avec qui j'étais vraiment, et mieux comprendre mes blessures et mes peurs. <strong>Le soin fut vraiment bénéfique.</strong> Je suis très reconnaissante d'avoir rencontré Maria. Merci.</p>
- <div class="c-sep"></div><div class="c-name">Stéphanie.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Elle m'a aidé à découvrir mes super pouvoirs grâce à ses dons et les comprendre. <strong>Elle a mis en lumière mes forces, ce qui a provoqué des prises de conscience sur ma valeur et donc des prises de décisions dans la matière !</strong> Merci beaucoup. Je la recommande sans aucune hésitation.</p>
- <div class="c-sep"></div><div class="c-name">Naïma.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Je sors de ce programme confiante, libérée et alignée à mon business de cœur. <strong>Son accompagnement est novateur et très riche. Maria s'adapte à nous et nous donne les messages de notre âme de façon très simple et efficace.</strong> Pas de chichi — rien que du pur amour finalement.</p>
- <div class="c-sep"></div><div class="c-name">Laurence.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Ce RDV m'a permis d'opérer de petits changements pour me rapprocher encore plus de ma mission de vie dont je n'étais pas si loin finalement. <strong>Et je ne parle même pas des soins énergétiques qui vous reboostent et gomment tous vos freins physiques.</strong> Merci encore pour tous ces échanges instructifs.</p>
- <div class="c-sep"></div><div class="c-name">Karine.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Magnifique expérience vécue avec Maria suite à une séance d'accompagnement mission de vie et super pouvoirs. <strong>Cette lumière posée sur nos peurs à libérer pour cheminer vers notre mission et connaître nos super pouvoirs est salvatrice !</strong> Toute ma gratitude Maria ! </p>
- <div class="c-sep"></div><div class="c-name">Valérie.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Bonjour, cette séance a été instructive et complète. Cette thérapeute est charmante, précise et ose dire les choses. <strong>Je valide l'expérience.</strong></p>
- <div class="c-sep"></div><div class="c-name">Pascal.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Un grand merci à Maria pour son aide précieuse et sa bienveillance. <strong>Les messages transmis sont donnés avec beaucoup de douceur et de tact. Une séance riche en émotions qui offre une réelle compréhension de soi et de son histoire et aide à l'apaisement.</strong></p>
- <div class="c-sep"></div><div class="c-name">Donia.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text"><strong>Coach intuitif à l'écoute et très gentille qui comprend de suite les blocages et les raisons ou causes.</strong> Je recommande.</p>
- <div class="c-sep"></div><div class="c-name">Christine.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Je ne savais pas vraiment à quoi m'attendre en prenant rendez-vous avec Maria et je peux vous dire que le voyage était intense ! J'ai vécu et ressenti des choses difficiles à expliquer. <strong>Même le sceptique que j'étais vous le recommande chaudement, vous me remercierez plus tard !</strong></p>
- <div class="c-sep"></div><div class="c-name">Gaël.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Merci pour cet échange riche ! J'ai pu mieux appréhender ce que je vivais et apprécier les outils, clés que vous m'avez remis. <strong> Magique ! </strong></p>
- <div class="c-sep"></div><div class="c-name">Chloé.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">J'ai choisi la séance mission de vie et super pouvoirs, Maria est une personne bienveillante et sympathique avec qui on se sent tout de suite à l'aise. <strong>Ce qu'elle canalise est incroyable, elle vous dira des vérités sans vous connaître et vous aiguillera sur votre véritable chemin.</strong> Ses conseils sont d'une grande aide ! Merci Maria pour cette séance magique </p>
- <div class="c-sep"></div><div class="c-name">Cindy.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Travailler sur soi avec Maria est un pur régal que je ne peux que conseiller car <strong>sa clairvoyance est au top et d'une précision à couper le souffle.</strong> Vous ressortez de vos RDV un peu chamboulé(e) certes car vous avez rdv avec vous et vos souvenirs enfouis parfois... mais vous ressortez avec une clarté dans vos idées.</p>
- <div class="c-sep"></div><div class="c-name">Karine.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Quoi dire si ce n'est que je suis reconnaissant et plein de Gratitude envers Maria ! La guidance a eu une telle résonnance que je n'ai pas les mots pour vous expliquer l'émotion que j'ai ressenti. <strong>Elle a su lire en moi comme dans un bouquin et ainsi révéler tout le potentiel qui était en sommeil.</strong> Sa capacité à mettre les mots justes sur votre mission de vie sont d'une telle clairvoyance que vous ne pouvez que Grandir.</p>
- <div class="c-sep"></div><div class="c-name">Pascal.</div></div></div>
-
- <div class="c-slide"><div class="c-card"><div class="c-quote-mark">"</div>
- <p class="c-text">Un grand MERCI à Maria qui m'a accompagné, énormément aidé, et transmis de merveilleux messages. C'était une séance magique, comme un moment hors du temps où j'ai pu me reconnecter avec qui j'étais vraiment. <strong>Le soin fut vraiment bénéfique.</strong> Je suis très reconnaissante d'avoir rencontré Maria.</p>
- <div class="c-sep"></div><div class="c-name">Stéphanie.</div></div></div>
-
- </div>
- </div>
-
- <div class="carousel-ctrl">
- <button class="c-btn" onclick="mv(-1)" aria-label="Précédent">←</button>
- <span class="c-count" id="cc">1 / 44</span>
- <button class="c-btn" onclick="mv(1)" aria-label="Suivant">→</button>
- </div>
- <div class="c-dots" id="cd"></div>
- </div>
- </section>
-
-
- <!-- ═══════ FOOTER ═══════ -->
- <footer class="footer" role="contentinfo">
- <div class="footer-grid">
-
- <!-- Gauche -->
- <div class="footer-left">
- <p class="footer-label">CONTACT</p>
- <a href="mailto:cassetesblocages@gmail.com" class="footer-email">cassetesblocages@gmail.com</a>
-
- <p class="footer-social-label">SUIVEZ-MOI<br>SUR LES RÉSEAUX SOCIAUX</p>
- <div class="footer-social-icons">
- <a href="https://www.youtube.com/@lechoixducoeur888" target="_blank" rel="noopener" aria-label="YouTube">
- <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/></svg>
- </a>
- <a href="https://www.facebook.com/profile.php?id=100010965070076" target="_blank" rel="noopener" aria-label="Facebook">
- <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.27h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
- </a>
- <a href="https://www.instagram.com/millionnairedecoeur/" target="_blank" rel="noopener" aria-label="Instagram">
- <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
- </a>
- </div>
- </div>
-
- <!-- Centre -->
- <div class="footer-center">
- <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/ALpPyNM14ztzNo1g/black-white-circle-bee-icon-food-logo-1-AQEZPLEa3gUx2pzB.jpg" class="footer-logo-img" alt="La Puissance du Cœur" />
- <p class="footer-legal-text">
- © 2026. Tous droits réservés à : La Puissance du Coeur (Maria Francheteau) — Reproduction totale ou partielle sous toutes ses formes interdites.<br>
- SIRET n° : 84927049100020<br><br>
- L'intégralité des éléments constituant ce site, notamment et sans limitation : textes, contenus rédactionnels, concepts, idées, noms, titres, projets, programmes, images, photographies, visuels, éléments graphiques, logos, charte graphique, structures, bases de données, noms de domaine ainsi que tout autre contenu original, sont protégés par les dispositions du Code de la propriété intellectuelle et par toute législation internationale applicable.<br><br>
- <a href="https://www.lapuissanceducoeur.com/mentions-legales">Mentions légales</a>
- –
- <a href="https://www.lapuissanceducoeur.com/conditions-generales-de-vente">Conditions générales de vente, d'annulation et de remboursement.</a>
- –
- <a href="https://www.lapuissanceducoeur.com/politique-de-confidentialite">Politique de confidentialité.</a>
- </p>
- <p class="footer-disclaimer">
- ⓘ Les accompagnements proposés ne se substituent pas à un suivi ou à un traitement médical ou psychologique. Pour toute question relevant de la santé, consultez un professionnel de santé.
- </p>
- </div>
-
- <!-- Droite -->
- <nav class="footer-right" aria-label="Navigation pied de page">
- <div class="footer-nav-links">
- <a href="https://www.lapuissanceducoeur.com/">Accueil</a>
- <a href="https://www.lapuissanceducoeur.com/offres-liberation-emotionnelle-quantique">Services</a>
- <a href="https://www.lapuissanceducoeur.com/articles-liberation-emotionnelle">Articles</a>
- <a href="https://www.lapuissanceducoeur.com/contact-liberation-emotionnelle">Contact</a>
- </div>
- </nav>
-
- </div>
- </footer>
-
-
- <script>
- // ═══ NAV MOBILE ═══
- const burger = document.getElementById('burgerBtn');
- const nav = document.getElementById('headerNav');
- burger.addEventListener('click', () => {
- const open = nav.classList.toggle('open');
- burger.setAttribute('aria-expanded', open);
- });
- document.addEventListener('click', (e) => {
- if (!burger.contains(e.target) && !nav.contains(e.target)) {
- nav.classList.remove('open');
- burger.setAttribute('aria-expanded', 'false');
- }
- });
-
-
- // ═══ PARTICULES — canvas pleine largeur ═══
- (function() {
-   const cv = document.getElementById('particlesMain');
-   if (!cv) return;
-   let ctx, W, H, isMob;
-   let particles = [];
-   let spawnTimer = 0;
-   let ts0 = null, started = false;
-   const SPAWN_INTERVAL = 130;
-
-   const pairs = [0,1,2,3].map(i => document.getElementById('sp'+i));
-   const liberte = document.getElementById('sp4');
-   const ALL_CARDS = [...pairs, liberte].filter(Boolean);
-   const CARD_DELAY=900, PAUSE_FULL=2800, FADE_OUT=600, PAUSE_EMPTY=500;
-   const CYCLE = ALL_CARDS.length*CARD_DELAY + PAUSE_FULL + FADE_OUT + PAUSE_EMPTY;
-   let cardsTs0 = null;
-
-   function resize() {
-     const r = cv.parentElement.getBoundingClientRect();
-     W = Math.round(r.width) || 800;
-     H = Math.round(r.height) || 220;
-     cv.width = W; cv.height = H;
-     ctx = cv.getContext('2d');
-     // Détecter mobile une fois par resize — fiable
-     isMob = window.innerWidth <= 700;
-     // Vider les particules pour éviter mélange desktop/mobile
-     particles = [];
-   }
-
-   function mkParticle() {
-     if (isMob) {
-       // ── MOBILE : UNIQUEMENT vertical, de haut en bas ──
-       // Largeur = même que les éléments (~65% centré de W)
-       // On évite les bords : marge de 17.5% de chaque côté
-       const margin = W * 0.26;
-       const x = margin + Math.random() * (W - margin * 2);
-       // Naît légèrement dans l'atome 1 (≈ 15% de H)
-       const startY = H * 0.15 + Math.random() * H * 0.03;
-       const spd = 1.0 + Math.random() * 1.2;
-       return {
-         x, y: startY,
-         vx: 0, vy: spd,           // strictement vertical
-         life: 1,
-         decay: 0.0018 + Math.random() * 0.0022,
-         sz: Math.random() * 1.6 + 0.6,
-         bright: Math.random() < 0.45,
-         trail: [], type: Math.floor(Math.random() * 3)
-       };
-     }
-
-     // ── DESKTOP : UNIQUEMENT horizontal, gauche→droite ──
-     // 50% naît côté gauche (atome→cœur), 50% côté centre (cœur→atome droit)
-     const fromLeft = Math.random() < 0.5;
-     const startX = fromLeft
-       ? Math.random() * W * 0.28
-       : W * 0.50 + Math.random() * W * 0.04;
-     const y = H / 2 + (Math.random() - 0.5) * H * 0.55;
-     const spd = 1.2 + Math.random() * 1.6;
-     // Côté droit : decay très faible pour traverser tout le canvas
-     const decay = fromLeft
-       ? 0.0025 + Math.random() * 0.0035
-       : 0.0010 + Math.random() * 0.0015;
-     return {
-       x: startX, y,
-       vx: spd, vy: 0,             // strictement horizontal
-       life: 1, decay,
-       sz: Math.random() * 2.0 + 0.8,
-       bright: Math.random() < 0.45,
-       trail: [], type: Math.floor(Math.random() * 3)
-     };
-   }
-
-   function drawParticle(p) {
-     p.trail.push({x: p.x, y: p.y});
-     if (p.trail.length > 38) p.trail.shift();
-     for (let j = p.trail.length - 1; j >= 0; j--) {
-       const pt = p.trail[j], f = j / p.trail.length;
-       ctx.beginPath(); ctx.arc(pt.x, pt.y, p.sz * 0.5 * f, 0, Math.PI * 2);
-       ctx.fillStyle = `rgba(235,190,60,${p.life * 0.42 * f})`; ctx.fill();
-     }
-     const sz = p.sz, a = p.life * (p.bright ? 0.92 : 0.72);
-     if (p.type === 1) {
-       for (let k = 0; k < 4; k++) {
-         const ang = k * Math.PI / 2;
-         ctx.beginPath(); ctx.moveTo(p.x, p.y);
-         ctx.lineTo(p.x + Math.cos(ang)*sz*1.8, p.y + Math.sin(ang)*sz*1.8);
-         ctx.strokeStyle = `rgba(245,210,72,${a*0.6})`; ctx.lineWidth = 0.6; ctx.stroke();
-       }
-       const gc = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,sz*0.65);
-       gc.addColorStop(0,`rgba(255,255,220,${a})`); gc.addColorStop(1,'rgba(235,190,55,0)');
-       ctx.beginPath(); ctx.arc(p.x,p.y,sz*0.65,0,Math.PI*2); ctx.fillStyle=gc; ctx.fill();
-     } else if (p.type === 2) {
-       ctx.beginPath(); ctx.arc(p.x,p.y,sz*1.3,0,Math.PI*2);
-       ctx.strokeStyle=`rgba(232,188,62,${a*0.55})`; ctx.lineWidth=0.7; ctx.stroke();
-       const gc2 = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,sz*0.5);
-       gc2.addColorStop(0,`rgba(255,252,210,${a})`); gc2.addColorStop(1,'rgba(215,170,40,0)');
-       ctx.beginPath(); ctx.arc(p.x,p.y,sz*0.5,0,Math.PI*2); ctx.fillStyle=gc2; ctx.fill();
-     } else {
-       const gh = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,sz*2.8);
-       gh.addColorStop(0,`rgba(255,248,180,${a*0.15})`); gh.addColorStop(1,'rgba(200,168,75,0)');
-       ctx.beginPath(); ctx.arc(p.x,p.y,sz*2.8,0,Math.PI*2); ctx.fillStyle=gh; ctx.fill();
-       const gc3 = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,sz);
-       gc3.addColorStop(0,`rgba(255,255,222,${a})`);
-       gc3.addColorStop(0.4,`rgba(238,192,62,${a*0.9})`);
-       gc3.addColorStop(1,'rgba(185,140,18,0)');
-       ctx.beginPath(); ctx.arc(p.x,p.y,sz,0,Math.PI*2); ctx.fillStyle=gc3; ctx.fill();
-     }
-   }
-
-   function updateCards(ts) {
-     if (!cardsTs0) cardsTs0 = ts;
-     const t = (ts - cardsTs0) % CYCLE;
-     const fadeStart = ALL_CARDS.length * CARD_DELAY + PAUSE_FULL;
-     const emptyStart = fadeStart + FADE_OUT;
-     if (t >= fadeStart && t < emptyStart) {
-       ALL_CARDS.forEach(el => { el.style.opacity='0'; el.style.transform='translateY(12px)'; });
-     } else if (t < fadeStart) {
-       ALL_CARDS.forEach((el, i) => {
-         if (t >= i * CARD_DELAY) { el.style.opacity='1'; el.style.transform='translateY(0)'; }
-         else { el.style.opacity='0'; el.style.transform='translateY(12px)'; }
-       });
-     }
-   }
-
-   function loop(ts) {
-     if (!ts0) { ts0 = ts; spawnTimer = ts; }
-     ctx.clearRect(0, 0, W, H);
-     if (ts - spawnTimer > SPAWN_INTERVAL) {
-       particles.push(mkParticle());
-       particles.push(mkParticle());
-       spawnTimer = ts;
-     }
-     for (let i = particles.length - 1; i >= 0; i--) {
-       const p = particles[i];
-       p.x += p.vx; p.y += p.vy;
-       p.life -= p.decay;
-       if (p.life <= 0 || p.x > W + 20 || p.y > H + 20) { particles.splice(i, 1); continue; }
-       drawParticle(p);
-     }
-     updateCards(ts);
-     requestAnimationFrame(loop);
-   }
-
-   ALL_CARDS.forEach(el => { el.style.opacity='0'; el.style.transform='translateY(20px)'; });
-
-   const obs = new IntersectionObserver(entries => {
-     if (entries[0].isIntersecting && !started) {
-       started = true;
-       resize(); // isMob défini ici, particules vidées
-       cardsTs0 = null;
-       requestAnimationFrame(loop);
-       obs.disconnect();
-     }
-   }, { threshold: 0.2 });
-   const sc = document.getElementById('spiralContainer');
-   if (sc) obs.observe(sc);
-   if (window.ResizeObserver) {
-     new ResizeObserver(() => { if (started) resize(); }).observe(sc);
-   }
- })();
-
- // ═══ CARROUSEL 44 ═══
- const N = 44; let cur = 0;
- const track = document.getElementById('ct');
- const ccEl = document.getElementById('cc');
- const dotsW = document.getElementById('cd');
-
- for (let i = 0; i < N; i++) {
- const d = document.createElement('button');
- d.className = 'c-dot' + (i === 0 ? ' on' : '');
- d.setAttribute('aria-label', 'Témoignage ' + (i + 1));
- d.onclick = () => go(i);
- dotsW.appendChild(d);
- }
-
- function go(n) {
- cur = Math.max(0, Math.min(n, N - 1));
- track.style.transform = 'translateX(-' + cur * 100 + '%)';
- ccEl.textContent = (cur + 1) + ' / ' + N;
- document.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('on', i === cur));
- }
- function mv(d) { go(cur + d === -1 ? N - 1 : cur + d === N ? 0 : cur + d); }
- setInterval(() => mv(1), 7000);
-
- // Swipe tactile
- let sx = 0;
- track.parentElement.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
- track.parentElement.addEventListener('touchend', e => {
- const dx = e.changedTouches[0].clientX - sx;
- if (Math.abs(dx) > 40) mv(dx < 0 ? 1 : -1);
- }, { passive: true });
- </script>
-
-<!-- BANDEAU COOKIES LPDC -->
-<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#0a1118;border-top:1px solid rgba(200,168,75,0.25);padding:20px 28px;font-family:'DM Sans',sans-serif;">
-  <div style="max-width:1200px;margin:0 auto;">
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:260px;">
-        <p style="font-size:0.82rem;font-weight:700;color:#C8A84B;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 6px;">Gestion des cookies</p>
-        <p style="font-size:0.75rem;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin:0;">Nous utilisons des cookies techniques nécessaires au fonctionnement du site et, avec votre accord, des cookies fonctionnels et marketing. Votre choix est mémorisé 13 mois. <a href="https://www.lapuissanceducoeur.com/politique-de-confidentialite" style="color:#C8A84B;text-decoration:underline;">En savoir plus</a></p>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;flex-shrink:0;">
-        <button onclick="cookieRefuse()" style="font-size:0.74rem;font-weight:600;letter-spacing:0.06em;padding:9px 18px;border-radius:4px;cursor:pointer;background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);font-family:'DM Sans',sans-serif;">Refuser</button>
-        <button onclick="cookieTogglePanel()" id="cookie-btn-custom" style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;padding:9px 18px;border-radius:4px;cursor:pointer;background:transparent;color:#C8A84B;border:1px solid rgba(200,168,75,0.4);font-family:'DM Sans',sans-serif;">Personnaliser ▼</button>
-        <button onclick="cookieAcceptAll()" style="font-size:0.74rem;font-weight:600;letter-spacing:0.06em;padding:9px 18px;border-radius:4px;cursor:pointer;background:#C8A84B;color:#0d1520;border:none;font-family:'DM Sans',sans-serif;">Tout accepter</button>
-      </div>
-    </div>
-
-    <div id="cookie-panel" style="display:none;border-top:1px solid rgba(200,168,75,0.12);margin-top:16px;padding-top:16px;">
-      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px;">
-
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:12px 16px;background:rgba(255,255,255,0.03);border-radius:4px;border:1px solid rgba(200,168,75,0.08);">
-          <div style="flex:1;">
-            <p style="font-size:0.78rem;font-weight:600;color:#ffffff;margin:0 0 3px;">Cookies techniques <span style="font-size:0.62rem;font-weight:600;color:#C8A84B;background:rgba(200,168,75,0.12);padding:2px 7px;border-radius:2px;margin-left:8px;letter-spacing:0.06em;">TOUJOURS ACTIFS</span></p>
-            <p style="font-size:0.70rem;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.5;margin:0;">Indispensables au fonctionnement du site. Sécurité anti-spam du formulaire de contact (Web3Forms), mémorisation de vos préférences cookies. Ne peuvent pas être désactivés.</p>
-          </div>
-          <div style="position:relative;width:38px;height:22px;flex-shrink:0;margin-top:2px;">
-            <input type="checkbox" checked disabled style="opacity:0;width:0;height:0;position:absolute;">
-            <span style="position:absolute;inset:0;background:#C8A84B;border-radius:22px;opacity:0.5;"></span>
-            <span style="position:absolute;width:16px;height:16px;left:19px;top:3px;background:#fff;border-radius:50%;"></span>
-          </div>
-        </div>
-
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:12px 16px;background:rgba(255,255,255,0.03);border-radius:4px;border:1px solid rgba(200,168,75,0.08);">
-          <div style="flex:1;">
-            <p style="font-size:0.78rem;font-weight:600;color:#ffffff;margin:0 0 3px;">Cookies fonctionnels</p>
-            <p style="font-size:0.70rem;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.5;margin:0;">Améliorent votre expérience : mémorisation de formulaires, préférences d'affichage, inscriptions à des événements ou webinars.</p>
-          </div>
-          <label style="position:relative;width:38px;height:22px;flex-shrink:0;margin-top:2px;cursor:pointer;">
-            <input type="checkbox" id="tog-func" style="opacity:0;width:0;height:0;position:absolute;" onchange="cookieUpdateToggle('func',this.checked)">
-            <span id="tog-func-bg" style="position:absolute;inset:0;background:rgba(255,255,255,0.12);border-radius:22px;transition:background 0.25s;"></span>
-            <span id="tog-func-dot" style="position:absolute;width:16px;height:16px;left:3px;top:3px;background:#fff;border-radius:50%;transition:transform 0.25s;"></span>
-          </label>
-        </div>
-
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:12px 16px;background:rgba(255,255,255,0.03);border-radius:4px;border:1px solid rgba(200,168,75,0.08);">
-          <div style="flex:1;">
-            <p style="font-size:0.78rem;font-weight:600;color:#ffffff;margin:0 0 3px;">Cookies marketing & analytics</p>
-            <p style="font-size:0.70rem;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.5;margin:0;">Mesure d'audience et contenu personnalisé. Utilisés si des outils d'analyse ou pixels de conversion sont installés (ex. Meta Pixel, Google Analytics).</p>
-          </div>
-          <label style="position:relative;width:38px;height:22px;flex-shrink:0;margin-top:2px;cursor:pointer;">
-            <input type="checkbox" id="tog-mkt" style="opacity:0;width:0;height:0;position:absolute;" onchange="cookieUpdateToggle('mkt',this.checked)">
-            <span id="tog-mkt-bg" style="position:absolute;inset:0;background:rgba(255,255,255,0.12);border-radius:22px;transition:background 0.25s;"></span>
-            <span id="tog-mkt-dot" style="position:absolute;width:16px;height:16px;left:3px;top:3px;background:#fff;border-radius:50%;transition:transform 0.25s;"></span>
-          </label>
-        </div>
-
-      </div>
-      <div style="display:flex;justify-content:flex-end;">
-        <button onclick="cookieSaveChoices()" style="background:#C8A84B;color:#0d1520;font-size:0.74rem;font-weight:700;letter-spacing:0.06em;padding:9px 22px;border-radius:4px;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;">Enregistrer mes choix</button>
-      </div>
-    </div>
+<div id="lpdc-modal" role="dialog" aria-modal="true" aria-label="Transition vers Millionnaire de Cœur">
+  <div class="m-ornament">
+    <div class="m-ornament-line"></div>
+    <div class="m-ornament-diamond"></div>
+    <div class="m-ornament-line r"></div>
+  </div>
+  <p class="m-eyebrow">Un nouveau chapitre s'ouvre</p>
+  <h2 class="m-title">Tout mouvement<br>vers soi est<br><em>une victoire.</em></h2>
+  <p class="m-text">
+    Vous avez suivi la voie de la puissance du cœur. Ce chemin vous a conduit jusqu'ici,
+    et c'est précisément là que tout commence vraiment.
+  </p>
+  <p class="m-text">
+    Millionnaire de Cœur est la prochaine étape naturelle de votre évolution —
+    clarté décisionnelle, intelligence énergétique, puissance souveraine.
+  </p>
+  <a href="https://www.millionnairedecoeur.com" class="m-cta">Franchir le prochain seuil</a>
+  <div class="m-countdown-wrap">
+    <p class="m-countdown-label">Redirection dans</p>
+    <p class="m-countdown" id="m-countdown">33</p>
+  </div>
+  <div class="m-signature">
+    <p class="m-signature-name">Maria Francheteau — Millionnaire de Cœur</p>
   </div>
 </div>
 
 <script>
-(function(){
-  var COOKIE_KEY='lpdc_cookie_consent';
-  var EXPIRY_DAYS=396;
-
-  function getCookie(){try{var v=localStorage.getItem(COOKIE_KEY);if(!v)return null;var d=JSON.parse(v);if(Date.now()>d.expires){localStorage.removeItem(COOKIE_KEY);return null;}return d;}catch(e){return null;}}
-  function setCookie(prefs){var d={prefs:prefs,expires:Date.now()+EXPIRY_DAYS*24*60*60*1000};localStorage.setItem(COOKIE_KEY,JSON.stringify(d));}
-  function hideBanner(){document.getElementById('cookie-banner').style.display='none';}
-  function showBanner(){document.getElementById('cookie-banner').style.display='block';}
-
-  window.cookieAcceptAll=function(){setCookie({technical:true,functional:true,marketing:true});hideBanner();}
-  window.cookieRefuse=function(){setCookie({technical:true,functional:false,marketing:false});hideBanner();}
-  window.cookieTogglePanel=function(){
-    var p=document.getElementById('cookie-panel');
-    var btn=document.getElementById('cookie-btn-custom');
-    var open=p.style.display==='block';
-    p.style.display=open?'none':'block';
-    btn.textContent=open?'Personnaliser ▼':'Fermer ▲';
-  }
-  window.cookieUpdateToggle=function(id,checked){
-    var bg=document.getElementById('tog-'+id+'-bg');
-    var dot=document.getElementById('tog-'+id+'-dot');
-    bg.style.background=checked?'#C8A84B':'rgba(255,255,255,0.12)';
-    dot.style.transform=checked?'translateX(16px)':'translateX(0)';
-  }
-  window.cookieSaveChoices=function(){
-    var func=document.getElementById('tog-func').checked;
-    var mkt=document.getElementById('tog-mkt').checked;
-    setCookie({technical:true,functional:func,marketing:mkt});
-    hideBanner();
-  }
-  window.cookieReopenBanner=function(){
-    document.getElementById('cookie-panel').style.display='none';
-    document.getElementById('cookie-btn-custom').textContent='Personnaliser ▼';
-    showBanner();
-  }
-
-  var existing=getCookie();
-  if(!existing){showBanner();}
-})();
+  let seconds = 33;
+  const el = document.getElementById('m-countdown');
+  const interval = setInterval(function() {
+    seconds--;
+    if (el) el.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(interval);
+      window.location.href = 'https://www.millionnairedecoeur.com';
+    }
+  }, 1000);
 </script>
-<!-- FIN BANDEAU COOKIES -->
 
 </body>
 </html>
