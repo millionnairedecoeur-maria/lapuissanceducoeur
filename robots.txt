@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: /
-
-# Site temporairement masque des moteurs de recherche
+Allow: /
